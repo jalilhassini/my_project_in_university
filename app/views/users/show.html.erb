@@ -1,0 +1,95 @@
+  <%= render "students/navbar" %>
+<% if notice %><p id="notice" class="alert alert-info"><%= notice %></p><% end %>
+<div class="container">
+<div class="card mb-3 elv" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <%= image_tag("logo.jpeg", :height=>"35%" ,:width=>"100%" ,:alt => "rss feed") %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+       <% if current_user && current_user.admin%>
+        <h3 class="card-title">Manager</h3>
+        <% else %>
+         <h3 class="card-title">Student</h3>
+         
+         <% end %>
+         
+<p>
+  <strong>Last Name:</strong>
+  <%= @user.Nom %>
+</p>
+
+<p>
+  <strong>First Name:</strong>
+  <%=  @user.Prénom %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%=  @user.Date_de_naissance %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%=  @user.sexe %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%=  @user.Adresse %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%=  @user.Ville %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%=  @user.Téléphone %>
+</p>
+
+<p>
+  <strong>Specialty:</strong>
+  <%=  @user.spécialité %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%=  @user.password_digest %>
+</p>
+
+<p>
+  <strong>Postal Code:</strong>
+  <%=  @user.code_postal %>
+</p>
+
+<p>
+  <strong>E-mail:</strong>
+  <%=  @user.Email %>
+</p>
+
+<p>
+  <strong>Nationality:</strong>
+  <%=  @user.Nationalité %>
+</p>
+
+<p>
+  <strong>Common:</strong>
+  <%=  @user.commune %>
+</p>
+ <p>
+  <strong>Files:</strong>
+ <%  @user.files.each do |file| %>
+   <%= link_to file.filename, rails_blob_path(file, disposition: :inline) %>
+ <% end %>
+ </p>
+  <%= link_to 'Edit', edit_user_path(@user),class:"btn btn-primary sh" %> 
+<%= link_to 'Back', root_path, class:"btn btn-primary"%>
+     </div>
+    </div>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @student.Nom %>
+</p>
+
+<p>
+  <strong>Prénom:</strong>
+  <%= @student.Prénom %>
+</p>
+
+<p>
+  <strong>Date de naissance:</strong>
+  <%= @student.Date_de_naissance %>
+</p>
+
+<p>
+  <strong>Sexe:</strong>
+  <%= @student.sexe %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @student.Adresse %>
+</p>
+
+<p>
+  <strong>Ville:</strong>
+  <%= @student.Ville %>
+</p>
+
+<p>
+  <strong>Téléphone:</strong>
+  <%= @student.Téléphone %>
+</p>
+
+<p>
+  <strong>Spécialité:</strong>
+  <%= @student.spécialité %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @student.password_digest %>
+</p>
+
+<p>
+  <strong>Code postal:</strong>
+  <%= @student.code_postal %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @student.Email %>
+</p>
+
+<p>
+  <strong>Nationalité:</strong>
+  <%= @student.Nationalité %>
+</p>
+
+<p>
+  <strong>Commune:</strong>
+  <%= @student.commune %>
+</p>
+ 
+ <% @student.files.each do |file| %>
+   <%= link_to file.filename, rails_blob_path(file, disposition: :attachment) %>
+ <% end %>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

@@ -1,0 +1,241 @@
+    .foor {
+        margin-bottom: 40px;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .five {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .six {
+        background-color: #04204e !important;
+        color: beige;
+        text-align: center;
+    }
+    .ten {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-weight: bolder;
+    text-decoration: underline;
+    }
+    .elv {
+        margin-top: 40px;
+    
+    }
+    .twlv {
+        margin-top: 40px;
+    }
+    .container {
+        width: 1200px !important;
+        margin: auto !important;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .upper {
+        text-transform: uppercase;
+    }
+    .main-color {
+        color: #1EAE98;
+    }
+
+    .main-background {
+        color: #1EAE98;
+    }
+
+    .ss {
+        color: azure;
+    }
+    
+    .header {
+        background: url("image11.jpg");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        color: #FFF;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .qq {
+        color: #FFF;
+    }
+
+    .header .overlay {
+        background:  rgba( 4, 32 , 78  , .7);
+        width: 100%;
+        height: 100%;
+    }
+
+    .header .navbar {
+        overflow: hidden;
+        padding: 20px 0;
+    }
+
+
+    .intro {
+        position: absolute;
+        top: 30%;
+        left: 23%;
+        right: 22%;
+        text-align: center;
+    }
+
+    .header .intro h1 {
+        font-weight: 800;
+        font-size: 50px;
+      
+    }
+
+    .header .intro p {
+        margin: 10px 0px 40px;
+        line-height: 1.9;
+        font-size: 20px;
+        color: #f5f3f3;
+      
+    }
+    .header .buttons button {
+        background: transparent;
+        padding: 10px 0;
+        width: 180px;
+        margin: 15px 8px;
+        font-size: 14px;
+        border: 1px solid #909090;
+        border-radius: 10px; 
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+
+    }
+
+    .header .buttons button:hover {
+        background-color: #0062cc;
+        border: 1px solid #0062cc;
+    }
+    .aa {
+        color: #FFF;
+        margin-right: 15px;
+    } 
+    .ig {
+        margin-right: 20px;
+    }   
+
+    .aboutus {
+        padding: 55px 0;
+        text-align: center;
+        background-color: #04204a1a;
+
+    }
+
+    .aboutus h1 {
+        font-style: 45px;
+        margin-bottom: 55px;
+        color: #04204a;
+    }
+
+    .aboutus p {
+        font-size: 18px;
+        color: #04204a;
+        line-height: 1.9;
+    }
+
+    .services {
+        padding: 55px 0;
+        text-align: center;
+        background-color: #04204a;
+    }
+
+    .services h1 {
+        font-size: 45px;
+        margin-bottom: 55px;
+        color: #fff;
+    }
+
+    .services .card {
+        border: 1px solid #0062cc;
+    }
+
+    
+    .services .card-body {
+        padding: 60px;
+      
+        background-color: #061a37;
+    }
+
+       
+    .services .card-body .card-title {
+        color: #fff;
+        font-weight: 700px;
+    }
+
+    .services .btn-primary {
+        color: #fff;
+        background-color: #04204a;
+        border-color: #0062;
+    }
+
+    
+    .services .btn-primary:hover {
+        color: #fff;
+        background-color: #0062cc;
+        border-color: #0062cc;
+    }
+
+    .buttont:hover {
+        background: transparent;
+        padding: 10px 0;
+        width: 180px;
+        margin: 15px 8px;
+        font-size: 14px;
+        border: 1px solid #909090;
+        border-radius: 10px; 
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        background-color: #0062cc;
+        border: 1px solid #0062cc;
+    }
+
+    .nv {
+        font-weight: bold;
+        font-family: monospace;
+        font-size: 28px;
+    }
+
+    .nvlk {
+        font-weight: 700;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+
+   .nvitem {
+        margin: 0 15px;
+    }
+
+    .abt {
+        padding: 180px;
+        background-color: #061a37;
+        border: 1px solid #0062cc;
+    }
+
+    .abtt{
+        border: 1px solid #0062cc;
+    }
+    .abttt {
+        color: #fff;
+        font-weight: 700px;   
+    }
+    .bd {
+        background-color: #909090;
+    }
+    .txt {
+        text-align: center;
+    }
+    .jpm {
+        margin-top: 30px;
+    }
+    .sh {
+        margin-right: 10px;
+    }

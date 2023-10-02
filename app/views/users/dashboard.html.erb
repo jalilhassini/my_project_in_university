@@ -1,0 +1,64 @@
+   <%= render "students/navbar" %>
+ <% if notice %><p id="notice" class="alert alert-info"><%= notice %></p> <% end %>
+ <% if current_user && current_user.admin%>
+<h1 class="ten">Students:</h1>
+<div class ="table-responsive-sm">
+<table class=" table table-bordered table-hover">
+  <thead class="six">
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Date of birth</th>
+      <th>Sex</th>
+      <th>Adress</th>
+      <th>City</th>
+      <th>Phone</th>
+      <th>Specialty</th>
+      <th>Postal code</th>
+      <th>E-mail</th>
+      <th>Nationality</th>
+      <th>Common</th>
+      <th>Files</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.Nom %></td>
+        <td><%= user.Prénom %></td>
+        <td><%= user.Date_de_naissance %></td>
+        <td><%= user.sexe %></td>
+        <td><%= user.Adresse %></td>
+        <td><%= user.Ville %></td>
+        <td><%= user.Téléphone %></td>
+        <td><%= user.spécialité %></td>
+        <td><%= user.code_postal %></td>
+        <td><%= user.Email %></td>
+        <td><%= user.Nationalité %></td>
+        <td><%= user.commune %></td>
+        <td ><% user.files.each do |file| %>
+   <%= link_to file.filename, rails_blob_path(file, disposition: :inline) %>
+ <% end %>
+       </td>
+        
+        <td>
+           <%= link_to 'Show', user, class:"btn btn-info qq" %></td>
+     
+        <td><%= link_to 'Edit', edit_user_path(user), class:"btn btn-info qq" %></td>
+        <td><%= link_to 'Destroy', user, class:"btn btn-info qq" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+    
+      <% end %>
+    
+  
+
+
+

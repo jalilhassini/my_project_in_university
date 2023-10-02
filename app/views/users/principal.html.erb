@@ -1,0 +1,139 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+  </head>
+  <body>
+    <div class="header">
+     <div class="overlay">
+      <div class="container">
+       <div class="navbar">
+       <div class="container">
+       <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+  <a class="navbar-brand nv" href="#">  <span class="aa">Abbes<span class="main-color">Laghrour</span></span></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="container">
+          <div class="container">
+          <div class="container">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active nvitem">
+        <%= link_to 'Home', root_path, class:"nav-link nvlk" %>
+      </li>
+      <li class="nav-item active nvitem">
+          <%= link_to 'About', about_path, class:"nav-link nvlk" %>
+      </li>
+      <li class="nav-item active nvitem">
+         <%= link_to 'Contact', contact_path, class:"nav-link nvlk" %>
+      </li>
+      <li class="nav-item active nvitem">
+        <%= link_to 'Dashboard', dashboard_path, class:"nav-link nvlk" %>
+      </li>
+
+    </ul>
+    </div>
+    </div>
+  </div>
+</nav>
+</div>
+       </div>
+         <div class="intro text-center">
+            <h1 class="upper">We Signup <span class="main-color">In University</span></h1>
+            <p class="ss"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <br> Assumenda inventore saepe debitis, autem mollitia ratione.<br>
+              adipisci 
+            repudiandae eveniet error labore tempora modi neque est delectus libero!</p>
+             <div class="buttons">
+            <button class="qq"> <%= button_to'Signup', signup_path, class:"btn qq", method: :get %></button>
+            <button class="qq"> <%= button_to'Login',  login_path, class:"btn qq", method: :get %></button>
+             </div>
+         </div>
+         
+      </div>
+     </div>
+    </div>
+        <div class="aboutus">
+          <div class="container">
+            <h1>About Us</h1>
+            <div class="row">
+              <div class="col">
+                <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                 by injected humour,
+                 or randomised words which don't look even slightly believable.
+                 If you are going to use a passage of Lorem Ipsum,
+                  you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as ne
+                   making this the first true generator on the Internet. 
+                   <p>
+                  It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,
+                   to generate Lorem Ipsum which looks reasonable.
+                   The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                   </p>
+                </p>
+               
+                  </div>
+                 </div>
+                </div>
+              </div>
+          <div class="services">
+          <div class="container">
+            <h1>Services</h1>
+            <div class="row">
+
+              <div class="col">
+                <div class="card" >
+                 <%= image_tag("image12.jpg", :height=>"200" ,:width=>"100", class:"card-img-top",:alt => "rss feed") %>
+                    <div class="card-body">
+                      <h5 class="card-title">Faculty</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">click to more</a>
+                    </div>
+                </div>
+            </div>
+           <div class="col">
+                <div class="card" >
+                     <%= image_tag("image13.jpg", :height=>"200" ,:width=>"100", class:"card-img-top",:alt => "rss feed") %>
+                    <div class="card-body">
+                      <h5 class="card-title">Department</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">click to more</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col">
+                <div class="card" >
+                     <%= image_tag("zza.jpg", :height=>"200" ,:width=>"100", class:"card-img-top",:alt => "rss feed") %>
+                    <div class="card-body">
+                      <h5 class="card-title">Specialty</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">click to more</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col">
+                <div class="card">
+                    <%= image_tag("images.jpg", :height=>"200" ,:width=>"100", class:"card-img-top",:alt => "rss feed") %>
+                    <div class="card-body">
+                      <h5 class="card-title">University</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">click to more</a>
+                    </div>
+                </div>
+            </div>
+         </div>
+       </div>
+    </div>
+         
+   
+     
+
+  </body>
+  </html>

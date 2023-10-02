@@ -1,0 +1,55 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Students</h1>
+<table class=" table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nom</th>
+      <th>Prénom</th>
+      <th>Date de naissance</th>
+      <th>Sexe</th>
+      <th>Adresse</th>
+      <th>Ville</th>
+      <th>Téléphone</th>
+      <th>Spécialité</th>
+      <th>Code postal</th>
+      <th>Email</th>
+      <th>Nationalité</th>
+      <th>Commune</th>
+      <th>Files</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.Nom %></td>
+        <td><%= student.Prénom %></td>
+        <td><%= student.Date_de_naissance %></td>
+        <td><%= student.sexe %></td>
+        <td><%= student.Adresse %></td>
+        <td><%= student.Ville %></td>
+        <td><%= student.Téléphone %></td>
+        <td><%= student.spécialité %></td>
+        <td><%= student.code_postal %></td>
+        <td><%= student.Email %></td>
+        <td><%= student.Nationalité %></td>
+        <td><%= student.commune %></td>
+        <td ><% student.files.each do |file| %>
+   <%= link_to file.filename, rails_blob_path(file, disposition: :attachment) %>
+ <% end %>
+       </td>
+
+         
+        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Student', new_student_path %>

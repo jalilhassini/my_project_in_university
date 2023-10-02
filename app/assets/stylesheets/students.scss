@@ -1,0 +1,24 @@
+// Place all the styles related to the students controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+ body {
+     margin: 0;
+     padding: 0;
+ }
+ .bg-dark {
+      background-color: #04204e !important;
+ }
+ .navbar-brand {
+    font-weight: bold;
+     font-family: monospace;
+     font-size: 28px;
+ }
+ .navbar-dark .navbar-nav .nav-link {
+     font-weight: 700;
+     font-size: 14px;
+     text-transform: capitalize;
+ }
+ .navbar-dark .navbar-nav .nav-item {
+     margin: 0 15px;
+ }

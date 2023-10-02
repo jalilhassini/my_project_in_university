@@ -1,0 +1,84 @@
+
+  
+<%= form_with(model: @user, local: true) do |f| %>
+
+ <h1 class="foor">Editing Student:</h1>
+   <div class="container">
+
+  <div class="field form-row">
+    <div class="col-md-4 mb-3">
+    <%= f.label :Last_Name, class:"mr-sm-2" %>
+    <%= f.text_field :Nom, class:"form-control mb-2 mr-sm-2 ", placeholder:"Enter Last name" %>
+
+       </div>
+  <div class="col-md-4 mb-3">
+    <%= f.label :First_Name, class:"mr-sm-2" %>
+    <%= f.text_field :Prénom, class:"form-control mb-2 mr-sm-2",  placeholder:"Enter  First name" %>
+        </div>
+
+  <div class="col-md-4 mb-3">
+    <%= f.label :Date_of_birth, class:"mr-sm-2" %>
+    <%= f.text_field :Date_de_naissance, class:"form-control mb-2 mr-sm-2", placeholder:"Enter date" %>
+        </div>
+  </div>
+  <div class="field form-row dropdown">
+   <div class="col-md-4 mb-3">
+    <%= f.label :sex %>
+    <%= f.text_field :sexe, class:"form-control", placeholder:"Sex" %>
+    </div>
+    <div class="col-md-4 mb-3">
+    <%= f.label :specialty %>
+    <%= f.text_field :spécialité, class:"form-control", placeholder:"Specialty" %>
+    </div>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :Adress %>
+    <%= f.text_field :Adresse, class:"form-control", placeholder:"Adress" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :City %>
+    <%= f.text_field :Ville, class:"form-control", placeholder:"City" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :Phone %>
+    <%= f.text_field :Téléphone, class:"form-control", placeholder:"N°Phone" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :Postal_code %>
+    <%= f.number_field :code_postal, class:"form-control", placeholder:"Postal code" %>
+  </div>
+
+  <div class="field form-row">
+   <div class="col-md-4 mb-3">
+    <%= f.label :Email, class:"mr-sm-2"  %>
+    <%= f.email_field :Email, class:"form-control mb-2 mr-sm-2", placeholder:"Name@example" %>
+     </div>
+     <div class="col-md-4 mb-3">
+    <%= f.label :Password, class:"mr-sm-2"  %>
+    <%= f.password_field :password, class:"form-control mb-2 mr-sm-2", placeholder:"Enter password" %>
+  </div>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :Nationality %>
+    <%= f.text_field :Nationalité, class:"form-control", placeholder:"Enter Nationality" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :common %>
+    <%= f.text_field :commune, class:"form-control", placeholder:"Enter common" %>
+  </div>
+  <br>
+  <div class="field custom-file ">
+    <%= f.label :Files,  class:"custom-file-label" %>
+    <%= f.file_field :files, multiple: true, class:"custom-file-input" %>
+  </div> 
+  <div class="action five">
+    <%= f.submit class:"btn btn-primary btn-lg active" %>
+  </div>
+  </div>
+<% end %>

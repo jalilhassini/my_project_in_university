@@ -1,0 +1,91 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <div class="container">
+  <div class="field form-row">
+    <div class="col-md-4 mb-3">
+    <%= form.label :Nom, class:"mr-sm-2" %>
+    <%= form.text_field :Nom, class:"form-control mb-2 mr-sm-2 ", placeholder:"Enter le Nom" %>
+
+       </div>
+  <div class="col-md-4 mb-3">
+    <%= form.label :Prénom, class:"mr-sm-2" %>
+    <%= form.text_field :Prénom, class:"form-control mb-2 mr-sm-2",  placeholder:"Enter le Prénom" %>
+        </div>
+
+  <div class="col-md-4 mb-3">
+    <%= form.label :Date_de_naissance, class:"mr-sm-2" %>
+    <%= form.text_field :Date_de_naissance, class:"form-control mb-2 mr-sm-2", placeholder:"Enter la date" %>
+        </div>
+  </div>
+  <div class="field form-row dropdown">
+   <div class="col-md-4 mb-3">
+    <%= form.label :sexe %>
+    <%= form.text_field :sexe, class:"form-control", placeholder:"Sexe" %>
+    </div>
+    <div class="col-md-4 mb-3">
+    <%= form.label :spécialité %>
+    <%= form.text_field :spécialité, class:"form-control", placeholder:"Spécialité" %>
+    </div>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Adresse %>
+    <%= form.text_field :Adresse, class:"form-control", placeholder:"Adresse" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Ville %>
+    <%= form.text_field :Ville, class:"form-control", placeholder:"la ville" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Téléphone %>
+    <%= form.text_field :Téléphone, class:"form-control", placeholder:"N°Téléphone" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :code_postal %>
+    <%= form.number_field :code_postal, class:"form-control", placeholder:"code postal" %>
+  </div>
+
+  <div class="field form-row">
+   <div class="col-md-4 mb-3">
+    <%= form.label :Email, class:"mr-sm-2"  %>
+    <%= form.email_field :Email, class:"form-control mb-2 mr-sm-2", placeholder:"Nom@example" %>
+     </div>
+     <div class="col-md-4 mb-3">
+    <%= form.label :password, class:"mr-sm-2"  %>
+    <%= form.password_field :password_digest, class:"form-control mb-2 mr-sm-2", placeholder:"Enter password" %>
+  </div>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Nationalité %>
+    <%= form.text_field :Nationalité, class:"form-control", placeholder:"Entrer la Nationalité" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :commune %>
+    <%= form.text_field :commune, class:"form-control", placeholder:"Entrer la commune" %>
+  </div>
+  <br>
+  <div class="field custom-file ">
+    <%= form.label :files,  class:"custom-file-label" %>
+    <%= form.file_field :files, multiple: true, class:"custom-file-input" %>
+  </div>
+    
+  <div class="action">
+    <%= form.submit class:"btn btn-primary" %>
+  </div>
+  </div>
+<% end %>

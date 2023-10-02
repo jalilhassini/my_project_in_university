@@ -1,0 +1,21 @@
+  <%= render "students/navbar" %>
+<%= form_with(scope: :session, url: login_path) do |f| %>
+<h1 class="three">Login</h1>
+ <% if alert %><p id="alert" class="alert alert-danger"><%= alert %></p> <% end %>
+   <div class="one">
+<div class="form-group">
+  <%= f.label :Email %><br/>
+  <%= f.email_field :Email, class: "form-control" %>
+</div>
+ 
+<div class="form-group">
+  <%= f.label :Password %><br/>
+  <%= f.password_field :password, class: "form-control" %>
+</div>
+ 
+<div class="form-group two">
+  <%= f.submit "Login", class:"btn btn-primary btn-block btn-lg active"  %>
+</div>
+</div>
+ 
+<% end %>
